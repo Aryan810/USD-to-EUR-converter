@@ -60,7 +60,7 @@ class MainProgram:
 			#self.source = urlopen('http://api.fixer.io/latest').read()
 			self.source = str(urlopen('http://devel.farebookings.com/api/curconversor/USD/EUR/1/').read())
 			self.source = self.source.replace("'", '').split(' ')
-			self.rate = self.source[len(self.source) - 1]
+			self.rate = self.source[-1]
 		
 		self.convert()
 
